@@ -134,6 +134,14 @@
   }
 }
 
+@utility page {
+  @apply flex flex-col gap-8 pt-8 pb-16 sm:gap-10 sm:pt-12 sm:pb-24;
+}
+
+@utility page-header {
+  @apply border-border/60 flex flex-col gap-5 border-b pb-8;
+}
+
 .image-rendering-pixelated {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;

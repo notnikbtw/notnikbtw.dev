@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="flex flex-col gap-8 pt-8 pb-16 sm:gap-10 sm:pt-12 sm:pb-24">
+    <div className="page">
       <ProjectsHeader />
       <ProjectsList />
     </div>
