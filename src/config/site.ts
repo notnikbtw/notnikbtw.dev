@@ -3,7 +3,7 @@ export const MOE_COUNTER_URL =
 
 export const PROJECTS_PER_PAGE = 6;
 
-export const SITE_URL = 'https://portfolio-notnikbtw.vercel.app';
+export const SITE_URL = 'https://www.notnikbtw.dev';
 
 export const LINKS = {
   email: {
@@ -27,8 +27,8 @@ export const LINKS = {
     href: 'https://github.com/notnikbtw/nixos-config',
   },
   portfolio: {
-    repo: 'notnikbtw/portfolio',
-    repositoryUrl: 'https://github.com/notnikbtw/portfolio',
+    repo: 'notnikbtw/notnikbtw.dev',
+    repositoryUrl: 'https://github.com/notnikbtw/notnikbtw.dev',
     liveUrl: SITE_URL,
   },
 } as const;

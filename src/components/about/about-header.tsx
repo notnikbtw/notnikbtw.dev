@@ -4,7 +4,7 @@ import { TerminalTitle } from '@/components/terminal-title';
 
 export function AboutHeader() {
   return (
-    <header className="border-border/60 flex flex-col gap-5 border-b pb-8">
+    <header className="page-header">
       <Breadcrumb />
 
       <div className="flex flex-col gap-2.5">
