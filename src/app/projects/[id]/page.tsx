@@ -10,9 +10,15 @@ export function generateStaticParams() {
   return projects.map(project => ({ id: project.id }));
 }
 
+type PageProps = {
+  params: Promise<{
+    id: string;
+  }>;
+};
+
 export async function generateMetadata({
   params,
-}: PageProps<'/projects/[id]'>): Promise<Metadata> {
+}: PageProps): Promise<Metadata> {
   const { id } = await params;
   const project = getProjectById(id);
 
@@ -24,9 +30,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProjectPage({
-  params,
-}: PageProps<'/projects/[id]'>) {
+export default async function ProjectPage({ params }: PageProps) {
   const { id } = await params;
   const project = getProjectById(id);
 
