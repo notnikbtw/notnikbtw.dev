@@ -2,13 +2,12 @@
 
 A minimalist personal portfolio with a terminal-inspired interface, built with Next.js 16, Tailwind CSS v4, and the Kanagawa color palette.
 
-[![CI](https://github.com/notnikbtw/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/notnikbtw/portfolio/actions/workflows/ci.yml)
+[![CI](https://github.com/notnikbtw/notnikbtw.dev/actions/workflows/ci.yml/badge.svg)](https://github.com/notnikbtw/notnikbtw.dev/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
-[![Deploy: Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)](https://portfolio-notnikbtw.vercel.app/)
 
-[Live Demo](https://portfolio-notnikbtw.vercel.app/) | [GitHub Repository](https://github.com/notnikbtw/portfolio) | [Issues](https://github.com/notnikbtw/portfolio/issues)
+[Live Demo](https://www.notnikbtw.dev) | [GitHub Repository](https://github.com/notnikbtw/notnikbtw.dev) | [Issues](https://github.com/notnikbtw/notnikbtw.dev/issues)
 
 ---
 
@@ -40,8 +39,8 @@ A portfolio website inspired by Unix aesthetics and terminal interfaces. The int
 ### Installation
 
 ```bash
-git clone https://github.com/notnikbtw/portfolio.git
-cd portfolio
+git clone https://github.com/notnikbtw/notnikbtw.dev.git
+cd notnikbtw.dev
 npm install
 npm run dev
 ```
