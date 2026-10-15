@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { socialLinks } from '@/config/navigation';
 import { ArrowRight } from 'lucide-react';
+import { HERO_TAGLINE } from '@/config/about';
 
 export function Hero() {
   return (
@@ -19,8 +20,7 @@ export function Hero() {
       </div>
 
       <p className="text-muted-foreground max-w-lg text-sm leading-relaxed sm:text-base">
-        Focused on building clean web applications, exploring backend
-        architecture, systems, and self-hosted infrastructure.
+        {HERO_TAGLINE}
       </p>
 
       <div className="flex flex-wrap items-center gap-2.5 pt-1">

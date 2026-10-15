@@ -1,6 +1,7 @@
 import { Breadcrumb } from '@/components/breadcrumb';
 import { Badge } from '@/components/ui/badge';
 import { TerminalTitle } from '@/components/terminal-title';
+import { ABOUT_HEADER } from '@/config/about';
 
 export function AboutHeader() {
   return (
@@ -11,8 +12,7 @@ export function AboutHeader() {
         <TerminalTitle path="~/about" />
 
         <p className="text-muted-foreground max-w-xl text-sm leading-relaxed sm:text-base">
-          Software engineer focused on clean architecture, full-stack systems,
-          and reproducible Linux environments.
+          {ABOUT_HEADER}
         </p>
       </div>
 
@@ -20,7 +20,7 @@ export function AboutHeader() {
         <Badge>
           role:
           <strong className="text-foreground font-medium">
-            full-stack engineer
+            full-stack developer
           </strong>
         </Badge>
         <Badge>

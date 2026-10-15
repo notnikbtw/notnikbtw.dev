@@ -30,11 +30,11 @@ export const projects: Project[] = [
     id: 'portfolio-website',
     title: 'Portfolio Website',
     description:
-      'A minimalist personal portfolio with a terminal-inspired interface, built using Next.js and the Kanagawa color palette.',
+      'A personal website with a terminal-inspired interface, built with Next.js and the Kanagawa color palette.',
     details: [
       'A personal website designed in a Unix and terminal style: monospaced typography, shell-style prompts, and the Kanagawa theme with light and dark modes.',
-      'It features a homepage with my favorite projects, a catalog of my projects with filtering options, and a page with my bio, information about me and my systems, and links. This site does not use cookies or collect personal data.',
-      'I tried to write high-quality, optimized code. This project uses ESLint, Prettier, Husky, and lint-staged. GitHub Actions also runs checks and provides continuous integration (CI), Dependabot updates dependencies, and the site is deployed to Vercel.',
+      'It features a homepage with my favorite projects, a catalog of my projects, and information about me.',
+      'I tried to write high-quality, optimized code. This project uses ESLint, Prettier, Husky, and lint-staged. GitHub Actions also runs checks and provides continuous integration (CI).',
     ],
     images: [
       {
@@ -67,11 +67,17 @@ export const projects: Project[] = [
     id: 'nixos-config',
     title: 'Dotfiles & NixOS Config',
     description:
-      'My personal Nix configurations for my PC and laptop, which use the Hyprland WM. Also included are my configurations for Quickshell, Rofi, Zsh, and other programs.',
+      'My Nix configuration for my desktop and laptop, both running the Hyprland window manager. Also included are my configurations for Quickshell, Rofi, Zsh, and other programs.',
     details: [
-      'My NixOS module configurations for my desktop computer and laptop (Lenovo IdeaPad 5 Pro). Both devices run Hyprland and use the same modules, while host-specific settings, such as UI scaling and battery profiles, live in one place.',
+      'My NixOS configurations for my desktop computer and laptop (Lenovo IdeaPad 5 Pro). Both devices run Hyprland and use the same modules, while host-specific settings, such as UI scaling and battery profiles, live in one place.',
       'The desktop environment consists of Quickshell (status bar, notifications, and OSD), Rofi as a launch panel, Hyprlock and Hypridle, Kitty, Zsh with Starship, and Tmux.',
       'At the system level, there is a Btrfs file system based on LUKS with zstd compression, hourly snapshots of /home using Snapper, monthly data checks, and zram swap space.',
+    ],
+    images: [
+      {
+        src: '/projects/nixos-config/fastfetch.webp',
+        alt: 'Fastfetch Output',
+      },
     ],
     tech: [
       'Nix',
@@ -94,9 +100,9 @@ export const projects: Project[] = [
     description:
       'Full-stack platform for booking tables and seats at restaurants. It includes an interactive search, a booking feature, reviews, and integration with Google Maps.',
     details: [
-      'A full-stack venue and table booking system split into a NestJS API and a React client. Users can view establishments on the map, find nearby places using Google Maps geolocation, view detailed information about establishments, reserve tables, and leave ratings and reviews.',
-      'Owners manage their establishments through their own page, which includes the name, description, photo galleries, and opening hours; there are also moderators who help manage reviews. Also, there is an admin page where the site, establishments, and users are managed; this page features four roles (user, moderator, owner, and super administrator), access to which is controlled through role guards.',
-      'The backend uses PostgreSQL with TypeORM, JWT authentication with refresh tokens, and Swagger API documentation. The project uses Docker for containerization and is deployed via GitHub Actions and Watchtower. The frontend is built using React 19, TypeScript, Vite, and Redux Toolkit.',
+      'A booking system for venues and tables, split into a NestJS API and a React client. Users can find places on a map, search for venues near them using Google Maps, and read details about each one. They can also reserve a table and leave ratings and reviews.',
+      'Owners manage their own venues: name, description, photo galleries, and opening hours. They can also add moderators to help with reviews. An admin page covers venues and users, and access is split into four roles (user, moderator, owner, and super administrator) enforced with role guards.',
+      'The backend runs on PostgreSQL with TypeORM, uses JWT authentication with refresh tokens, and has Swagger API docs. It is containerized with Docker and deployed through GitHub Actions and Watchtower. The frontend is built with React 19, TypeScript, Vite, and Redux Toolkit.',
     ],
     tech: [
       'React',

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Link } from '@/components/ui/link';
 import { navItems, socialLinks } from '@/config/navigation';
 import { webBadges } from '@/config/badges';
+import { NixWebring } from '@/components/nix-webring';
 import { MOE_COUNTER_URL } from '@/config/site';
 
 export function Footer() {
@@ -17,6 +18,7 @@ export function Footer() {
           className="image-rendering-pixelated min-h-10"
           loading="lazy"
         />
+        <NixWebring />
         {webBadges.length > 0 && (
           <div
             aria-label="Web badges"

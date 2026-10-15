@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-A minimalist personal portfolio with a terminal-inspired interface, built with Next.js 16, Tailwind CSS v4, and the Kanagawa color palette.
+A personal website with a terminal-inspired interface, built with Next.js 16, Tailwind CSS v4, and the Kanagawa color palette.
 
 [![CI](https://github.com/notnikbtw/notnikbtw.dev/actions/workflows/ci.yml/badge.svg)](https://github.com/notnikbtw/notnikbtw.dev/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
@@ -15,12 +15,21 @@ A minimalist personal portfolio with a terminal-inspired interface, built with N
 
 A portfolio website inspired by Unix aesthetics and terminal interfaces. The interface features thoughtful typography, is accessible thanks to semantic markup, and does not use cookies for tracking; it also provides fast navigation between pages.
 
+### Features
+
+- A home page featuring favorite projects and a catalog page listing all projects
+- A details page for each project (`/projects/:id`) with a description, tech stack, links, and an optional image slider
+- An about page with a bio, my workstation, and contact links
+- Light and dark themes
+- [Nix webring](https://nixwebr.ing) links in the footer
+
 ---
 
 ## Tech Stack
 
 - **Framework**: Next.js 16 (App Router, Turbopack, React 19)
 - **Styling**: Tailwind CSS v4
+- **UI Components**: shadcn/ui (Radix UI), Embla Carousel
 - **Theme**: next-themes (local storage persistence)
 - **Icons & Fonts**: Lucide React, Geist, Geist Mono
 - **Code Quality**: TypeScript 5, ESLint 9, Prettier, Husky, lint-staged
@@ -33,7 +42,7 @@ A portfolio website inspired by Unix aesthetics and terminal interfaces. The int
 
 ### Prerequisites
 
-- Node.js 20.x or newer
+- Node.js 24.x
 - npm
 
 ### Installation
@@ -50,11 +59,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to view th
 ### Quality Scripts
 
 - `npm run dev`: Start development server with Turbopack
-- `npm run build`: Create an optimized production build
-- `npm run start`: Start production server
+- `npm run build`: Create an optimized production build (a static export in `out/`)
+- `npx serve@latest out`: Preview the production build (`npm run start` does not work with `output: 'export'`)
 - `npm run lint`: Run ESLint checks
 - `npm run typecheck`: Run TypeScript compiler checks
 - `npm run format:check`: Verify code formatting with Prettier
+
+Husky runs `lint-staged` (Prettier and ESLint on staged files) before every commit. CI runs the format check, lint, typecheck, and build on every pull request.
 
 ---
 
