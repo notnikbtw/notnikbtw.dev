@@ -33,6 +33,11 @@ export const LINKS = {
   },
 } as const;
 
+export const NIX_WEBRING = {
+  name: 'notnikbtw',
+  url: 'https://nixwebr.ing',
+} as const;
+
 export const SITE_BADGE = {
   title: '88x31 Button',
   alt: '!Nik - 88x31 Button',
