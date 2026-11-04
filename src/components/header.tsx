@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { navItems } from '@/config/navigation';
-import { ModeToggle } from '@/components/theme-toggle';
+import { ModeToggle } from '@/components/mode-toggle';
+import { PaletteSelect } from '@/components/palette-select';
 
 export function Header() {
   const pathname = usePathname();
@@ -42,6 +43,7 @@ export function Header() {
               </Link>
             );
           })}
+          <PaletteSelect />
           <ModeToggle />
         </nav>
       </div>
