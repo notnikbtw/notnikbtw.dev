@@ -1,6 +1,9 @@
 export const PALETTES = [
   { id: 'kanagawa', label: 'Kanagawa' },
   { id: 'gruvbox', label: 'Gruvbox' },
+  { id: 'catppuccin', label: 'Catppuccin' },
+  { id: 'everforest', label: 'Everforest' },
+  { id: 'rose-pine', label: 'Rosé Pine' },
 ] as const;
 
 export type PaletteId = (typeof PALETTES)[number]['id'];
