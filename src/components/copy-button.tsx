@@ -36,7 +36,7 @@ export function CopyButton({
       aria-label={copied ? 'Copied to clipboard' : ariaLabel}
       title={copied ? 'Copied!' : 'Copy'}
       className={cn(
-        'border-border/70 bg-background/60 text-muted-foreground hover:border-foreground/50 hover:bg-card hover:text-foreground focus-visible:ring-ring inline-flex items-center gap-1 border px-1.5 py-0.5 font-mono text-[11px] transition-colors focus-visible:ring-1 focus-visible:outline-none',
+        'button-compact',
         copied &&
           'border-chart-2/60 bg-chart-2/10 text-chart-2 hover:border-chart-2/80 hover:bg-chart-2/15 hover:text-chart-2',
         className
