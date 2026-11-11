@@ -26,7 +26,7 @@ export type PrivacyConfig = {
 };
 
 export const PRIVACY_CONFIG: PrivacyConfig = {
-  lastUpdated: 'September 2026',
+  lastUpdated: 'November 2026',
   repositoryUrl: LINKS.portfolio.repositoryUrl,
   sections: [
     {
@@ -77,7 +77,7 @@ export const PRIVACY_CONFIG: PrivacyConfig = {
         },
         {
           label: 'Local Storage',
-          text: 'The only data stored in your browser is a single localStorage key used by next-themes to persist your active color theme preference (dark or light mode).',
+          text: 'The only data stored in your browser is two localStorage keys: one used by next-themes to remember dark or light mode, and one that remembers which color theme you picked.',
         },
       ],
     },

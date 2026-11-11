@@ -1,12 +1,16 @@
-import Image from 'next/image';
+'use client';
+
 import { Link } from '@/components/ui/link';
 import { navItems, socialLinks } from '@/config/navigation';
-import { webBadges } from '@/config/badges';
+import { WebBadges } from '@/components/web-badges';
 import { NixWebring } from '@/components/nix-webring';
 import { MOE_COUNTER_URL } from '@/config/site';
+import { useState } from 'react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const [inspectMode, setInspectMode] = useState(false);
 
   return (
     <footer className="border-border bg-background w-full border-t">
@@ -19,39 +23,16 @@ export function Footer() {
           loading="lazy"
         />
         <NixWebring />
-        {webBadges.length > 0 && (
-          <div
-            aria-label="Web badges"
-            className="mx-auto flex max-w-md flex-wrap items-center justify-center gap-2.5"
+        <div className="flex flex-col justify-center gap-1">
+          <button
+            type="button"
+            onClick={() => setInspectMode(prev => !prev)}
+            aria-pressed={inspectMode}
           >
-            {webBadges.map(badge => {
-              const badgeImage = (
-                <Image
-                  src={badge.src}
-                  alt={badge.name}
-                  width={88}
-                  height={31}
-                  unoptimized
-                  className="image-rendering-pixelated"
-                />
-              );
-
-              return badge.url ? (
-                <Link
-                  key={badge.name}
-                  href={badge.url}
-                  className="inline-block transition-opacity hover:opacity-85"
-                >
-                  {badgeImage}
-                </Link>
-              ) : (
-                <span key={badge.name} className="inline-block">
-                  {badgeImage}
-                </span>
-              );
-            })}
-          </div>
-        )}
+            inspect buttons: {inspectMode ? 'on' : 'off'}
+          </button>
+          <WebBadges inspectMode={inspectMode} />
+        </div>
         <div className="border-border/40 flex w-full flex-col items-center justify-between gap-4 border-t pt-5 sm:flex-row">
           <p className="font-mono">
             &copy; {currentYear}{' '}

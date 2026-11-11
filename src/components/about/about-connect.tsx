@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Download } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { SectionHeader } from '@/components/section-header';
 import { Link } from '@/components/ui/link';
@@ -62,11 +63,21 @@ export function AboutConnect() {
                 </div>
               </div>
 
-              <CopyButton
-                value={SITE_BADGE.embedHtml}
-                ariaLabel="Copy HTML embed code for 88x31 badge"
-                className="self-start sm:self-auto"
-              />
+              <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto">
+                <a
+                  href={SITE_BADGE.src}
+                  download
+                  aria-label="Download 88x31 badge as PNG"
+                  className="button-compact"
+                >
+                  <Download className="h-3 w-3" aria-hidden="true" />
+                  <span>download</span>
+                </a>
+                <CopyButton
+                  value={SITE_BADGE.embedHtml}
+                  ariaLabel="Copy HTML embed code for 88x31 badge"
+                />
+              </div>
             </div>
 
             <p className="text-muted-foreground text-xs leading-relaxed">
