@@ -27,14 +27,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'portfolio-website',
-    title: 'Portfolio Website',
+    id: 'personal-website',
+    title: 'Personal Website',
     description:
-      'A personal website with a terminal-inspired interface, built with Next.js and the Kanagawa color palette.',
+      'My personal website, designed in the terminal style and built using Next.js, features a variety of cool themes and pages',
     details: [
-      'A personal website designed in a Unix and terminal style: monospaced typography, shell-style prompts, and the Kanagawa theme with light and dark modes.',
-      'It features a homepage with my favorite projects, a catalog of my projects, and information about me.',
-      'I tried to write high-quality, optimized code. This project uses ESLint, Prettier, Husky, and lint-staged. GitHub Actions also runs checks and provides continuous integration (CI).',
+      'This is my personal website where I do whatever I want ᗜ⩊ᗜ I wanted to design it in a terminal-style and drew inspiration from various window managers.',
+      "It has a home page featuring my favorite projects, a page listing all my projects, and a page about me. There are also some cool 88x31 buttons in the footer, and I love them, they're really cool",
+      "In the future, I'd really like to start my own blog, and someday I'll set up a separate page for it. But right now, unfortunately, I don't have enough time for that",
     ],
     images: [
       {
@@ -67,10 +67,10 @@ export const projects: Project[] = [
     id: 'nixos-config',
     title: 'Dotfiles & NixOS Config',
     description:
-      'My Nix configuration for my desktop and laptop, both running the Hyprland window manager. Also included are my configurations for Quickshell, Rofi, Zsh, and other programs.',
+      'My Nix configuration for my desktop and laptop, both running the Hyprland window manager. Also included are my configurations for Waybar, Rofi and other programs.',
     details: [
-      'My NixOS configurations for my desktop computer and laptop (Lenovo IdeaPad 5 Pro). Both devices run Hyprland and use the same modules, while host-specific settings, such as UI scaling and battery profiles, live in one place.',
-      'The desktop environment consists of Quickshell (status bar, notifications, and OSD), Rofi as a launch panel, Hyprlock and Hypridle, Kitty, Zsh with Starship, and Tmux.',
+      'My NixOS configurations for my desktop computer and laptop (Lenovo IdeaPad 5 Pro). Both devices run Hyprland and use the same modules.',
+      'The desktop environment consists of Waybar, Rofi as a launch panel, Hyprlock, and Zsh with Starship.',
       'At the system level, there is a Btrfs file system based on LUKS with zstd compression, hourly snapshots of /home using Snapper, monthly data checks, and zram swap space.',
     ],
     images: [
@@ -83,7 +83,8 @@ export const projects: Project[] = [
       'Nix',
       'Hyprland',
       'tuigreet',
-      'Quickshell',
+      'Waybar',
+      'Dunst',
       'Rofi',
       'Hyprlock + Hypridle',
       'Zsh + Starship',

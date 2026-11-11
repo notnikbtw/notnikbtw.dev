@@ -72,4 +72,9 @@ export const webBadges: WebBadge[] = [
     src: '/buttons/notnite.png',
     url: 'https://notnite.com/',
   },
+  {
+    name: 'Lunananananananananana',
+    src: 'https://lunya.moe/img/88x31/entities/lunanana.apng',
+    url: 'https://lunya.moe/',
+  },
 ];
