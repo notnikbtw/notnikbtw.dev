@@ -22,21 +22,18 @@ export function PrivacySections() {
           />
 
           <Card className="flex flex-col gap-4 p-4 sm:p-5">
-            <p className="text-muted-foreground text-sm leading-relaxed sm:text-base">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               {section.description}
             </p>
 
             {section.points && section.points.length > 0 && (
               <div className="border-border/60 flex flex-col gap-3 border-t pt-3">
                 {section.points.map(point => (
-                  <div
-                    key={point.label}
-                    className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3"
-                  >
-                    <span className="text-foreground shrink-0 font-mono text-xs font-semibold">
+                  <div key={point.label} className="flex flex-col gap-1">
+                    <span className="text-foreground font-mono text-lg font-semibold">
                       [{point.label}]:
                     </span>
-                    <span className="text-muted-foreground text-xs leading-relaxed sm:text-sm">
+                    <span className="text-muted-foreground text-sm leading-relaxed">
                       {point.text}
                     </span>
                   </div>
@@ -45,11 +42,11 @@ export function PrivacySections() {
             )}
 
             {section.links && section.links.length > 0 && (
-              <div className="border-border/60 mt-1 flex flex-wrap items-center gap-4 border-t pt-3">
+              <div className="border-border/60 mt-1 flex flex-col gap-4 border-t pt-3">
                 {section.links.map(link => (
                   <div
                     key={link.href}
-                    className="flex flex-wrap items-center justify-between gap-3"
+                    className="flex items-center justify-between gap-3"
                   >
                     <Link
                       href={link.href}
@@ -61,7 +58,6 @@ export function PrivacySections() {
                         aria-hidden="true"
                       />
                     </Link>
-
                     {link.canCopy && (
                       <CopyButton
                         value={link.label}

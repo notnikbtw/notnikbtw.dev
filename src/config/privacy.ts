@@ -26,74 +26,72 @@ export type PrivacyConfig = {
 };
 
 export const PRIVACY_CONFIG: PrivacyConfig = {
-  lastUpdated: 'November 2026',
+  lastUpdated: '2026-11-19',
   repositoryUrl: LINKS.portfolio.repositoryUrl,
   sections: [
-    {
-      id: 'agreement',
-      title: 'Terms & Agreement',
-      description:
-        'By accessing and browsing this website, you acknowledge that you have read these terms and conditions and agree to them. This site is a non-commercial personal portfolio and a demonstration of technical capabilities, maintained by !Nik.',
-      points: [
-        {
-          label: 'Scope',
-          text: 'This website is intended solely to showcase projects in the field of software development, technical experiments, workstation specifications, and my personal experience in the field of engineering.',
-        },
-        {
-          label: 'Acceptance',
-          text: 'By continuing to use this site, you acknowledge that you understand and agree to these terms. If you do not agree, you may stop browsing the site.',
-        },
-      ],
-    },
     {
       id: 'privacy-analytics',
       title: 'Privacy & Analytics',
       description:
-        'Your privacy is respected by default. This website does not collect any personal data and does not contain intrusive trackers or third-party ad networks.',
+        'This is a personal website. It uses traffic analytics and saves appearance settings in your browser. There are no accounts, forms asking for personal details, or ads',
       points: [
         {
-          label: 'No Personal Data',
-          text: 'Names, IP addresses, email addresses, and personal browsing profiles are never collected, stored, or sold.',
+          label: 'Hosting',
+          text: 'Your browser connects to the hosting provider to load the site. The provider receives your IP address and request headers and may keep server logs under its own policies',
         },
         {
-          label: 'Vercel Analytics',
-          text: 'General traffic metrics (number of page views, referral sources, device types, country) are processed using Vercel Web Analytics without storing IP addresses or tracking activity across third-party websites.',
+          label: 'Analytics',
+          text: 'This website uses Vercel Web Analytics to analyze which pages users visit, where visitors come from, and to obtain approximate information about their location and devices. Vercel does not use cookies to identify visitors or track their activity across different websites. Visitor session identifiers are deleted after 24 hours, but aggregated statistical data is stored separately',
         },
         {
           label: 'Visitor Counter',
-          text: 'The footer displays a retro-pixel-style view counter (Moe Counter), which increments a simple, publicly accessible integer representing the number of views without identifying your device or browser.',
+          text: 'The small counter in the footer is loaded from the website count.getloli.com. Your browser connects directly to this service, which receives your IP address and request headers. This service manages server logs and data retention periods. Other button images and fonts are loaded from this website',
+        },
+      ],
+      links: [
+        {
+          label: 'Vercel Analytics privacy',
+          href: 'https://vercel.com/docs/analytics/privacy-policy',
+        },
+        {
+          label: 'Moe Counter project',
+          href: 'https://github.com/journey-ad/Moe-Counter',
         },
       ],
     },
     {
       id: 'cookies-storage',
-      title: 'Cookies & Local Storage',
+      title: 'Browser Settings',
       description:
-        'This website operates completely without the use of cookies. No tracking cookies, no marketing cookies, and no third-party session IDs are stored on your system.',
+        'The site remembers your appearance settings using localStorage. They stay in your browser between visits',
       points: [
         {
-          label: 'Zero Cookies',
-          text: 'No cookie consent banner is needed or displayed because no tracking cookies are set.',
+          label: 'Saved Preferences',
+          text: 'There are three keys: "theme" for light, dark, or system mode; "palette" for colors; and "font" for Departure Mono or IBM Plex Mono. You can change them using the appearance controls or remove them by clearing this site’s browser data',
         },
         {
-          label: 'Local Storage',
-          text: 'The only data stored in your browser is two localStorage keys: one used by next-themes to remember dark or light mode, and one that remembers which color theme you picked.',
+          label: 'Cookies',
+          text: 'The website itself does not set cookies for tracking, marketing, or login purposes. The external counter processes its own responses and may use different approaches to cookies or data storage',
         },
       ],
     },
     {
       id: 'open-source',
-      title: 'Open Source & Code',
+      title: 'Code & Licenses',
       description:
-        'All of the source code for this portfolio has been published on GitHub.',
+        'The code is on GitHub under the MIT License. Feel free to explore it and use it in your own projects',
       points: [
         {
-          label: 'MIT License',
-          text: 'The codebase is distributed under the MIT License. You are welcome to inspect, study, fork, and borrow architectural patterns for your own work.',
+          label: 'Third-Party Work',
+          text: 'The Departure Mono and IBM Plex Mono fonts are distributed under the SIL Open Font License 1.1, which is included with the font files. Libraries, buttons, and other materials from third-party developers are subject to their own licenses. This site’s MIT License does not supersede those licenses',
         },
         {
-          label: 'Brand & Content',
-          text: 'Personal branding, nickname (!Nik), custom 88x31 badges, and original biographical writings remain copyrighted and reserved.',
+          label: 'Site Content',
+          text: 'The MIT license covers the code, not automatically the branding, writing, or original artwork. Feel free to add the site’s 88×31 button to your website and link back to this site :3',
+        },
+        {
+          label: 'Before You Run It',
+          text: 'Code and configurations are shared as-is. Please review them before use and keep backups',
         },
       ],
       links: [
@@ -101,35 +99,27 @@ export const PRIVACY_CONFIG: PrivacyConfig = {
           label: LINKS.portfolio.repo,
           href: LINKS.portfolio.repositoryUrl,
         },
-      ],
-    },
-    {
-      id: 'disclaimer',
-      title: 'Disclaimer & "As Is"',
-      description:
-        'All projects, code samples, configuration files, scripts, and documentation posted on this website are provided strictly “AS IS,” without any warranties.',
-      points: [
         {
-          label: 'No Liability',
-          text: 'The author is not responsible for any damages, configuration errors, or data loss caused by executing or modifying any code or settings presented here.',
-        },
-        {
-          label: 'Personal Views',
-          text: 'All views, architectural opinions, and technical assessments expressed here are strictly personal and do not represent the position of my past, present, or future employers or clients.',
+          label: 'Third-party notices & licenses',
+          href: '/THIRD_PARTY_NOTICES.txt',
         },
       ],
     },
     {
       id: 'contact',
-      title: 'Contact & Inquiries',
+      title: 'Questions?',
       description:
-        'If you have any questions, clarifications, or feedback regarding these terms or privacy practices, feel free to reach out directly via email or GitHub.',
-      points: [],
+        'This site is maintained by !Nik. Do you have questions about privacy, the code, or the use of materials from the site? Contact me by email or check out other ways to get in touch on the About page',
       links: [
         {
           label: LINKS.email.value,
           href: LINKS.email.href,
           canCopy: true,
+        },
+        {
+          label: 'Other contact options',
+          href: '/about',
+          canCopy: false,
         },
       ],
     },

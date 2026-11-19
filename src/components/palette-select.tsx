@@ -8,10 +8,12 @@ import {
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { usePalette } from '@/components/providers/use-palette';
 import { PALETTES, type PaletteId } from '@/config/palettes';
+import { ReadabilityToggle } from '@/components/readability-toggle';
 
 export function PaletteSelect() {
   const { palette, setPalette } = usePalette();
@@ -22,19 +24,24 @@ export function PaletteSelect() {
         <Button
           variant="ghost"
           size="icon"
-          aria-label="Choose color theme"
-          title="Choose color theme"
+          aria-label="Appearance settings"
+          title="Appearance settings"
           className="text-muted-foreground hover:text-foreground hover:bg-muted/50"
         >
           <Palette className="size-4" aria-hidden="true" />
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="end" className="min-w-40 font-mono">
+      <DropdownMenuContent
+        align="end"
+        collisionPadding={12}
+        className="min-w-56 font-mono"
+      >
         <DropdownMenuLabel className="text-muted-foreground text-[11px] tracking-wider uppercase">
-          Color theme
+          Appearance
         </DropdownMenuLabel>
         <DropdownMenuRadioGroup
+          aria-label="Color theme"
           value={palette}
           onValueChange={value => setPalette(value as PaletteId)}
         >
@@ -44,6 +51,8 @@ export function PaletteSelect() {
             </DropdownMenuRadioItem>
           ))}
         </DropdownMenuRadioGroup>
+        <DropdownMenuSeparator />
+        <ReadabilityToggle />
       </DropdownMenuContent>
     </DropdownMenu>
   );

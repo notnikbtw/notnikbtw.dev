@@ -31,7 +31,7 @@ A portfolio website inspired by Unix aesthetics and terminal interfaces. The int
 - **Styling**: Tailwind CSS v4
 - **UI Components**: shadcn/ui (Radix UI), Embla Carousel
 - **Theme**: next-themes (local storage persistence)
-- **Icons & Fonts**: Lucide React, Geist, Geist Mono
+- **Icons & Fonts**: Lucide React, Departure Mono, IBM Plex Mono
 - **Code Quality**: TypeScript 5, ESLint 9, Prettier, Husky, lint-staged
 - **Analytics & Hosting**: Vercel, Vercel Web Analytics
 - **CI / Automation**: GitHub Actions CI, Dependabot
@@ -72,3 +72,7 @@ Husky runs `lint-staged` (Prettier and ESLint on staged files) before every comm
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for details.
+
+Third-party code and fonts retain their original licenses. See
+[THIRD_PARTY_NOTICES.txt](public/THIRD_PARTY_NOTICES.txt) for notices included
+in the static site.
