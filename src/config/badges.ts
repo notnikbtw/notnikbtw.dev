@@ -44,7 +44,7 @@ export const webBadges: WebBadge[] = [
   },
   {
     name: 'quanten​zitrone',
-    src: 'https://quantenzitrone.eu/res/88x31.gif',
+    src: '/buttons/quantenzitrone.gif',
     url: 'https://quantenzitrone.eu',
   },
   {
@@ -74,7 +74,7 @@ export const webBadges: WebBadge[] = [
   },
   {
     name: 'Lunananananananananana',
-    src: 'https://lunya.moe/img/88x31/entities/lunanana.apng',
+    src: '/buttons/lunanana.apng',
     url: 'https://lunya.moe/',
   },
 ];
