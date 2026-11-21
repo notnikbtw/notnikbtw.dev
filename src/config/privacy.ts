@@ -4,6 +4,7 @@ export type PrivacyLink = {
   label: string;
   href: string;
   canCopy?: boolean;
+  isFile?: boolean;
 };
 
 export type PrivacyPoint = {
@@ -102,6 +103,7 @@ export const PRIVACY_CONFIG: PrivacyConfig = {
         {
           label: 'Third-party notices & licenses',
           href: '/THIRD_PARTY_NOTICES.txt',
+          isFile: true,
         },
       ],
     },

@@ -1,7 +1,7 @@
 import { PRIVACY_CONFIG } from '@/config/privacy';
 import { SectionSubheader } from '@/components/section-subheader';
 import { Card } from '@/components/ui/card';
-import { Link } from '@/components/ui/link';
+import { Link, linkVariants } from '@/components/ui/link';
 import { CopyButton } from '@/components/copy-button';
 import { ArrowRight } from 'lucide-react';
 
@@ -43,29 +43,33 @@ export function PrivacySections() {
 
             {section.links && section.links.length > 0 && (
               <div className="border-border/60 mt-1 flex flex-col gap-4 border-t pt-3">
-                {section.links.map(link => (
-                  <div
-                    key={link.href}
-                    className="flex items-center justify-between gap-3"
-                  >
-                    <Link
-                      href={link.href}
-                      className="inline-flex max-w-full items-center gap-1.5 font-mono text-xs font-semibold"
+                {section.links.map(link => {
+                  const LinkElement = link.isFile ? 'a' : Link;
+
+                  return (
+                    <div
+                      key={link.href}
+                      className="flex items-center justify-between gap-3"
                     >
-                      <span className="truncate">{link.label}</span>
-                      <ArrowRight
-                        className="h-3.5 w-3.5 shrink-0"
-                        aria-hidden="true"
-                      />
-                    </Link>
-                    {link.canCopy && (
-                      <CopyButton
-                        value={link.label}
-                        ariaLabel={`Copy ${link.label}`}
-                      />
-                    )}
-                  </div>
-                ))}
+                      <LinkElement
+                        href={link.href}
+                        className={`${link.isFile ? linkVariants() : ''} inline-flex max-w-full items-center gap-1.5 font-mono text-xs font-semibold`}
+                      >
+                        <span className="truncate">{link.label}</span>
+                        <ArrowRight
+                          className="h-3.5 w-3.5 shrink-0"
+                          aria-hidden="true"
+                        />
+                      </LinkElement>
+                      {link.canCopy && (
+                        <CopyButton
+                          value={link.label}
+                          ariaLabel={`Copy ${link.label}`}
+                        />
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             )}
           </Card>
